@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemma Ventura Atsarà</title>
-    <link rel="icon" href="Mesa de trabajo 1-20.ico" type="image/x-icon">
+    <title>Gemma Ventura</title>
+    <link rel="icon" href="IMAGES/Mesa de trabajo 1-20.ico" type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -50,6 +50,7 @@
             overflow-y: scroll; /* Permite el desplazamiento vertical */
             height: 100vh; /* Asegura que la sección de proyectos ocupe toda la altura de la ventana */
             scroll-behavior: smooth; /* Desplazamiento suave */
+            transition: opacity 0.5s; /* Transición suave */
         }
 
         .proyectos p {
@@ -88,14 +89,14 @@
         }
 
         .copyright {
-        font-size: 8px; /* Ajusta este valor según lo pequeño que quieras que sea */
-        color: rgb(189, 189, 189); /* Puedes cambiar el color si es necesario */
+            font-size: 8px; /* Ajusta este valor según lo pequeño que quieras que sea */
+            color: rgb(189, 189, 189); /* Puedes cambiar el color si es necesario */
         }
 
         .highlight-link {
-    color: rgb(189, 189, 189); /* Cambia este valor al color que prefieras */
-    font-weight: regular; /* Opcional: para hacerlo más destacado */
-    text-decoration: none;
+            color: rgb(189, 189, 189); /* Cambia este valor al color que prefieras */
+            font-weight: regular; /* Opcional: para hacerlo más destacado */
+            text-decoration: none;
         }
 
         .descripcion {
@@ -110,13 +111,13 @@
         }
 
         .hover-image {
-        display: none; /* Oculta la imagen inicialmente */
-        position: absolute; /* Posiciona la imagen sobre el texto */
-        top: -665px; /* Ajusta la posición vertical de la imagen */
-        left: 10px; /* Ajusta la posición horizontal de la imagen */
-        width: auto;
-        height: auto;
-    } 
+            display: none; /* Oculta la imagen inicialmente */
+            position: absolute; /* Posiciona la imagen sobre el texto */
+            top: -665px; /* Ajusta la posición vertical de la imagen */
+            left: 10px; /* Ajusta la posición horizontal de la imagen */
+            width: auto;
+            height: auto;
+        } 
 
         .descripcion:hover .hover-image {
             display: block; /* Muestra la imagen al pasar el ratón */
@@ -125,6 +126,7 @@
         .descripcion:hover .name {
             color: rgb(255, 255, 255); /* Cambia a tu color preferido */
         }
+        
         .highlight-link {
             color: rgb(189, 189, 189); /* Cambia este valor al color que prefieras */
             font-weight: regular; /* Opcional: para hacerlo más destacado */
@@ -139,6 +141,12 @@
         .highlight-link:active {
             color: rgb(60, 60, 60); /* Cambia el color del texto al hacer clic */
         }
+
+        /* Estilo para hacer más oscuro el lado derecho al hacer hover en la imagen */
+        .descripcion:hover ~ .proyectos {
+            opacity: 0.10; /* Cambia la opacidad al hacer hover sobre la imagen */
+        }
+
     </style>
 </head>
 <body>
@@ -187,7 +195,7 @@
             <div class="proyecto">
                 <div class="slider">
                     <div class="slides" id="project2Slides">
-                        <img src="AI-URBANWELL.jpg" alt="Proyecto 2 - Imagen 1">
+                        <img src="AI-URBANWELL.JPG" alt="Proyecto 2 - Imagen 1">
                     </div>
                 </div>
                 <p class="titulo">AI-UrbanWell</p>
@@ -200,6 +208,7 @@
                     Photos: 1<br>
                     <p>
                         <a href="https://docs.google.com/presentation/d/1vKN7AHB9W8EP0F00QG0kgCO0YcirbYgNtCHR9jYgkj8/edit#slide=id.p" class="highlight-link" target="_blank">📁 Read the full case study</a>
+                        </a>
                     </p>
             </div>
             <br>
