@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemma Ventura</title>
-    <link rel="icon" href="IMAGES/Mesa de trabajo 1-20.ico" type="image/x-icon">
+    <link rel="icon" href="Mesa de trabajo 1-20.ico" type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -19,8 +19,8 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            background-color: #101010; /* Color de fondo de toda la web */
-            color: rgb(189, 189, 189); /* Color del texto para que sea visible sobre el fondo oscuro */
+            background-color: #101010;
+            color: rgb(189, 189, 189);
         }
 
         .container {
@@ -32,11 +32,11 @@
         .descripcion {
             width: 40%;
             padding: 10px;
-            padding-right: 20px; /* Añade espacio a la derecha para separar las secciones */
-            background-color: #101010; /* Fondo para la parte de descripción (un gris oscuro para contraste) */
-            position: sticky; /* Hace que la sección de descripción permanezca fija */
-            top: 0; /* Fija la posición al borde superior */
-            align-self: flex-end; /* Alinea la sección de descripción en la parte inferior */
+            padding-right: 20px;
+            background-color: #101010;
+            position: sticky;
+            top: 0;
+            align-self: flex-end;
         }
 
         .descripcion p {
@@ -46,11 +46,11 @@
         .proyectos {
             width: 60%;
             padding: 20px;
-            background-color: #101010; /* Fondo para la parte de proyectos */
-            overflow-y: scroll; /* Permite el desplazamiento vertical */
-            height: 100vh; /* Asegura que la sección de proyectos ocupe toda la altura de la ventana */
-            scroll-behavior: smooth; /* Desplazamiento suave */
-            transition: opacity 0.5s; /* Transición suave */
+            background-color: #101010;
+            overflow-y: scroll;
+            height: 100vh;
+            scroll-behavior: smooth;
+            transition: opacity 0.5s;
         }
 
         .proyectos p {
@@ -59,93 +59,147 @@
         }
         
         .proyectos .titulo {
-            color: #ffffff; /* Color del título del proyecto */
+            color: #ffffff;
             font-weight: bold;
-            margin-bottom: 0px; /* Espacio debajo del título */
+            margin-bottom: 0px;
         }
 
         .slider {
             position: relative;
             max-width: 100%;
             margin: auto;
-            overflow: hidden; /* Oculta las imágenes que están fuera del área del slider */
-            cursor: default; /* Cambia el cursor al pasar sobre el slider */
+            overflow: hidden;
+            cursor: default;
         }
 
         .slides {
-            display: flex; /* Permite que las imágenes se coloquen en fila */
-            transition: transform 0.5s ease; /* Transición suave */
+            display: flex;
+            transition: transform 0.5s ease;
         }
 
         .slides img {
-            width: 100%; /* Ajusta el tamaño de las imágenes al contenedor */
-            height: auto; /* Mantiene la relación de aspecto */
+            width: 100%;
+            height: auto;
             margin-bottom: 7px;
-            cursor: e-resize; 
+            cursor: e-resize;
         }
 
         .proyecto {
-            margin-bottom: 20px; /* Espacio entre proyectos */
+            margin-bottom: 20px;
         }
 
         .copyright {
-            font-size: 8px; /* Ajusta este valor según lo pequeño que quieras que sea */
-            color: rgb(189, 189, 189); /* Puedes cambiar el color si es necesario */
+            font-size: 8px;
+            color: rgb(189, 189, 189);
         }
 
         .highlight-link {
-            color: rgb(189, 189, 189); /* Cambia este valor al color que prefieras */
-            font-weight: regular; /* Opcional: para hacerlo más destacado */
+            color: rgb(189, 189, 189);
+            font-weight: regular;
             text-decoration: none;
         }
 
         .descripcion {
-            position: relative; /* Necesario para la posición de la imagen */
+            position: relative;
         }
 
         .name {
-            font-size: 13px; /* Ajusta el tamaño según sea necesario */
-            color: rgb(189, 189, 189); /* Color inicial */
-            transition: color 0.3s; /* Transición suave para el color */
-            cursor: pointer; /* Cambia el cursor al pasar el ratón */
+            font-size: 13px;
+            color: rgb(189, 189, 189);
+            transition: color 0.3s;
+            cursor: pointer;
         }
 
         .hover-image {
-            display: none; /* Oculta la imagen inicialmente */
-            position: absolute; /* Posiciona la imagen sobre el texto */
-            top: -665px; /* Ajusta la posición vertical de la imagen */
-            left: 10px; /* Ajusta la posición horizontal de la imagen */
+            display: none;
+            position: absolute;
+            top: -665px;
+            left: 10px;
             width: auto;
             height: auto;
         } 
 
         .descripcion:hover .hover-image {
-            display: block; /* Muestra la imagen al pasar el ratón */
+            display: block;
         }
 
         .descripcion:hover .name {
-            color: rgb(255, 255, 255); /* Cambia a tu color preferido */
+            color: rgb(255, 255, 255);
         }
         
         .highlight-link {
-            color: rgb(189, 189, 189); /* Cambia este valor al color que prefieras */
-            font-weight: regular; /* Opcional: para hacerlo más destacado */
+            color: rgb(189, 189, 189);
+            font-weight: regular;
             text-decoration: none;
-            transition: color 0.3s, background-color 0.3s; /* Transiciones suaves para el color y el fondo */
+            transition: color 0.3s, background-color 0.3s;
         }
 
         .highlight-link:hover {
-            color: rgb(255, 255, 255); /* Cambia el color del texto al pasar el ratón */
+            color: rgb(255, 255, 255);
         }
 
         .highlight-link:active {
-            color: rgb(60, 60, 60); /* Cambia el color del texto al hacer clic */
+            color: rgb(60, 60, 60);
         }
 
-        /* Estilo para hacer más oscuro el lado derecho al hacer hover en la imagen */
         .descripcion:hover ~ .proyectos {
-            opacity: 0.10; /* Cambia la opacidad al hacer hover sobre la imagen */
+            opacity: 0.10;
         }
+
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .descripcion, .proyectos {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .descripcion {
+                order: 2;
+                align-self: flex-start;
+            }
+
+            .proyectos {
+                order: 1;
+                height: auto;
+                overflow-y: visible;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .descripcion {
+                width: 50%;
+                padding-right: 10px;
+            }
+
+            .proyectos {
+                width: 50%;
+                padding-left: 10px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .descripcion {
+                width: 40%;
+                padding-right: 20px;
+            }
+
+            .proyectos {
+                width: 60%;
+                padding-left: 20px;
+            }
+        }
+    </style>
 
     </style>
 </head>
@@ -195,7 +249,7 @@
             <div class="proyecto">
                 <div class="slider">
                     <div class="slides" id="project2Slides">
-                        <img src="AI-URBANWELL.jpg" alt="Proyecto 2 - Imagen 1">
+                        <img src="AI-URBANWELL.JPG" alt="Proyecto 2 - Imagen 1">
                     </div>
                 </div>
                 <p class="titulo">AI-UrbanWell</p>
