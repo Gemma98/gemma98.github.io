@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemma Ventura Atsarà</title>
+    <link rel="icon" href="Mesa de trabajo 1-20 copia.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 1.3;
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            color: rgb(67, 255, 25);
+            margin-bottom: 15px;
+            margin-top: 3px;
+            margin-left: 1px;
+        }
+
+        h1 {
+            margin-left: 1.5px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: #101010;
+            color: #ADADAD;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .descripcion {
+            width: 40%;
+            padding: 10px;
+            padding-right: 20px;
+            background-color: #101010;
+            position: sticky;
+            top: 0;
+            align-self: flex-end;
+        }
+
+        .descripcion p {
+            font-size: 13px;
+            line-height: 1.2;
+        }
+
+        .proyectos {
+            width: 60%;
+            padding: 20px;
+            background-color: #101010;
+            overflow-y: scroll;
+            height: 100vh;
+            scroll-behavior: smooth;
+            transition: opacity 0.3s;
+            padding-left: 10px; 
+            padding-right: 10px; 
+        }
+
+        .proyectos p {
+            font-size: 13px;
+            margin-bottom: 10px;
+            margin-right: 40px; 
+        }
+
+        .proyectos .titulo {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            cursor: default;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 7px;
+            cursor: e-resize;
+        }
+
+        #project1Slides img,
+        #project2Slides img,
+        #project5Slides img {
+            cursor: default;
+        }
+
+        .proyecto {
+            margin-bottom: 20px;
+        }
+
+        .copyright {
+            font-size: 8px;
+            color: #ADADAD;
+            line-height: 0.4px;
+        }
+
+        .highlight-link {
+            color: #ADADAD;
+            font-weight: regular;
+            text-decoration: none;
+        }
+
+        .descripcion {
+            position: relative;
+        }
+
+        .name {
+            font-size: 13px;
+            color: rgb(189, 189, 189);
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .highlight-link {
+            color: rgb(189, 189, 189);
+            font-weight: regular;
+            text-decoration: none;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .highlight-link:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .highlight-link:active {
+            color: rgb(60, 60, 60);
+        }
+
+        .descripcion:hover ~ .proyectos {
+            opacity: 0.10;
+        }       
+
+        .resized-image {
+            width: 300px;
+            height: auto;
+        }
+
+        .Sebastien{
+            width: 99%; 
+        }
+
+        .Interfaz1{
+            width: 420px;  
+            height: 600px;  
+            margin-left: 210px;
+        }
+
+        .Interfaz4 {
+            width: 420px;  
+            height: auto;  
+            margin-left: 210px;
+        }
+
+        .Interfaz2{
+            width: 100%; 
+        }
+
+        .Interfaz3{
+            width: 300px;  
+            height: auto;  
+        }
+
+        .Interfaz5{
+            width: 99%; 
+        }
+
+        .Interfaz6 {
+            width: 880px;  
+            height: auto; 
+        }
+
+        .titulo {
+            font-size: 12px; 
+            font-weight: bold; 
+            color: rgb(67, 255, 25); 
+            margin-bottom: 10px; 
+        }
+
+        .small-text {
+            font-size: 6px; 
+            color: #ADADAD; 
+            margin-top: 5px; 
+        }
+
+        .copyright {
+            font-size: 10px;
+            color: #ADADAD;
+            line-height: 0.1px;
+        }
+
+        .copyright2 {
+            font-size: 10px;
+            color: #ADADAD;
+            line-height: -2px;
+            margin-left: 210px;
+        }
+
+        .interfaz4 {
+            width: 200px;  
+            height: 200px;
+        }
+
+        .Interfaz8 {
+            width: 300px;  
+            height: 400px;
+            margin-left: 260px;
+        }
+
+        
+
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .descripcion, .proyectos {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .descripcion {
+                order: 2;
+                align-self: flex-start;
+            }
+
+            .proyectos {
+                order: 1;
+                height: auto;
+                overflow-y: visible;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .descripcion {
+                width: 50%;
+                padding-right: 10px;
+            }
+
+            .proyectos {
+                width: 50%;
+                padding-left: 10px; 
+                padding-right: 10px; 
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .descripcion {
+                width: 40%;
+                padding-right: 20px;
+            }
+
+            .proyectos {
+                width: 60%;
+                padding-left: 10px; 
+                padding-right: 10px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="descripcion">
+            <h1>What if AI could create your weekly menu based<br>on your daily routine and current fridge and pantry inventory?</h1>
+            <p>
+                In the hectic daily routine, finding time to plan and cook can be overwhelming.<br>
+                The lack of time makes deciding what to prepare and cook both challenging and stressful,<br>leading us to seek 
+                quick and practical solutions. With multiple responsibilities, people often<br>
+                face the stress of making rapid meal decisions without compromising their health<br>or the quality
+                of their food. This demand is driving the creation of simple cooking tools<br>and apps that help people prepare 
+                healthy meals quickly and easily.
+                <br><br>
+            </p>
+        </aside>
+
+        <main class="proyectos">
+            <a class="highlight-link" href="index.html">
+                <h2>←  Back</h2>
+            </a>
+            <!-- Proyecto 1 -->
+            <div class="proyecto">
+                <p class="titulo">Balancing simplicity and nutrition in a busy life<br><br></p>
+                <p>
+                    The stress and lack of time can lead to choose for pre-packaged meals, takeout, or recipes that 
+                    require minimal preparation time. However, many people are looking for alternatives that allow 
+                    them to enjoy nutritious and tasty meals without sacrificing their well-being or spending hours
+                    in the kitchen. They seek tools that offer immediacy, simplifying culinary decisions and optimizing
+                    the use of available ingredients to reduce waste and enhance their quality of life.
+                </p><br><br><br>
+                <img src="food_picture.jpg" alt="Descripción de la imagen" class="Interfaz1">
+                <div class="footer-image">
+                    <span class="copyright2">⮑ Recommendations for calm spaces: based on the user's current stress levels<br></span>
+                </div><br><br><br><br>
+            </div>
+
+    
+                <p class="titulo">AI into everyday life<br><br>
+                </p>
+                <p>
+                    Imagine an artificial intelligence that not only analyzes the contents of your fridge and pantry
+                    but also takes your weekly routine into account to create completely personalized menus.
+                    This innovative approach not only optimizes the use of the ingredients you already have on hand 
+                    but also adapts to your schedule and lifestyle, simplifying meal management and reducing food waste.<br><br><br><br><br>
+                    <img src="IMAGINE_AI_teoricament_be.gif" alt="Descripción de la imagen" class="Interfaz6">
+                    <div class="footer-image">
+                    </div><br><br><br><br><br>
+    
+                <p class="titulo">Instant food identification and overview<br><br>
+                </p>
+                <p>
+                    The AI-powered inventory screen simplifies managing the food in your fridge and pantry. It displays 
+                    a live picture of the food and uses advanced image recognition technology to provide the names 
+                    of the items. By capturing images of the ingredients with cameras or sensors, the AI automatically
+                    identifies and categorizes each food product, from fruits and vegetables to meats and packaged 
+                    items. Then process these images to recognize and classify the foods, making it easy and manage 
+                    what you have on hand<br><br>
+                </p><br><br>
+                <img src="APPLE_.gif" alt="Descripción de la imagen" class="Interfaz8">
+                <br><br><br><br><br><br><br>
+    
+                <p class="titulo">AI-Optimized weekly meal planning<br><br>
+                </p>
+                <p>
+                    Based on this information, the artificial intelligence creates a personalized weekly menu using the ingredients you currently have. It considers your daily routine, including meal times and special
+                    activities, to ensure that the menu fits into your lifestyle.
+                    The AI also works to minimize food waste by using what you already have, and it supports your 
+                    health goals and personal preferences. This approach makes meal planning easier, helps you eat 
+                    healthily, and fits your schedule perfectly.<br><br>
+                </p><br><br>
+                <img src="agenda.png" alt="Descripción de la imagen" class="Sebastien">
+                <div class="footer-image">
+                    <span class="copyright">⮑ Personalized weekly menu based on your ingredients and schedule.</span>
+                </div><br><br><br><br><br>
+    
+    
+                <p class="titulo">AI-Generated shopping list<br><br>
+                </p>
+                <p>
+                    Imagine an AI that seamlessly manages the task of creating your shopping list for you. 
+This intelligent system automatically generates a comprehensive and detailed shopping list based 
+on the specific ingredients needed for your meals. By analyzing your weekly menu and considering
+your current fridge and pantry inventory, the AI ensures that you only buy what you need.
+The shopping list is meticulously organized into categories such as fruits, vegetables, proteins, 
+and more, making it easier to navigate the grocery store. With each item grouped, you can quickly 
+find everything on your list, saving time and reducing the chance of forgetting essential items.<br><br>
+                </p><br><br>
+                <img src="LISAT_MOBILE.mp4" alt="Descripción de la imagen" class="Interfaz4">
+                <div class="footer-image">
+                    <span class="copyright2">⮑  AI-generated automatic shopping list, organized by categories to simplify, your shopping experience. <br></span>
+                </div><br><br><br><br><br>
+
+                <p class="titulo">Let AI Create Your Recipes<br><br>
+                </p>
+                <p>
+                    Transforms your kitchen ingredients into custom recipes. It then uses natural language processing 
+                    to generate recipes customized specifically to your ingredients. Each recipe crafted by the AI features
+                    a title, the list of ingredients, step-by-step cooking instructions, and a detailed narrative that brings 
+                    the recipe to life. This means you not only get a delicious meal but also a guided cooking experience 
+                    that makes preparing it easy and enjoyable.<br><br>
+                </p><br><br>
+                <img src="_Receta.jpg" alt="Descripción de la imagen" class="Interfaz5">
+                <div class="footer-image">
+                    <span class="copyright">⮑ Highlight nearby community events or safe social spaces</span>
+                </div><br>
+
+                <script>
+                    function showSlide(slideIndex, sliderId) {
+                        const slides = document.querySelector(`#${sliderId}`);
+                        const totalSlides = slides.children.length;
+                        if (slideIndex >= totalSlides) {
+                            slideIndex = 0; // Reinicia al primer slide
+                        }
+                        if (slideIndex < 0) {
+                            slideIndex = totalSlides - 1; // Va al último slide
+                        }
+                        slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+                        return slideIndex; // Retorna el índice actual
+                    }
+                    
+                    const currentSlides = Array.from({ length: 7 }, () => 0); // Almacena el índice actual para cada proyecto
+                    
+                    const totalProjects = 7; // Cambia esto según el número de proyectos
+                    
+                    // Añadir evento de clic para cada imagen en los sliders
+                    for (let i = 1; i <= totalProjects; i++) {
+                        const slides = document.querySelector(`#project${i}Slides`);
+                        const totalSlides = slides.children.length;
+                    
+                        // Cambia la función del clic para cada imagen
+                        for (let j = 0; j < totalSlides; j++) {
+                            slides.children[j].addEventListener('click', () => {
+                                currentSlides[i - 1] = showSlide(currentSlides[i - 1] + 1, `project${i}Slides`);
+                            });
+                        }
+                    }
+                </script>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
