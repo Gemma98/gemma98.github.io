@@ -22,15 +22,13 @@
 
 
 
-        
-
         .menu {
     position: fixed;
-    top: 4%; /* Centra verticalmente */
+    top: 3.5%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta para alinear al centro */
-    width: 202px; /* Ajusta automáticamente el ancho del menú según el contenido */
-    height: 38px; /* Altura fija del menú */
+    width: 188px; /* Ajusta automáticamente el ancho del menú según el contenido */
+    height: 33px; /* Altura fija del menú */
     background-color: rgba(236, 236, 236, 0.8); 
     border-radius: 4px;
     display: flex;
@@ -42,6 +40,9 @@
     -webkit-backdrop-filter: blur(40px); 
     opacity: 1; 
 }
+
+
+
 
 .menu-item {
     font-size: 11px;
@@ -141,7 +142,7 @@
 .about {
     position: absolute;
     left: 14px;
-    top: 315px;
+    top: 345px;
     font-size: 37px;
     color: #a1a1a1;
     line-height: 1.2;
@@ -323,7 +324,7 @@ a {
             margin-top: 1px; /* Espacio mínimo entre imagen y título */
             margin-bottom: 5px; /* Espacio menor entre título y descripción */
             color: #c2c2c2;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Helvetica, sans-serif;
             font-weight: 500;
             text-align: left;
             margin-left: -8px;
@@ -427,6 +428,8 @@ a {
 }
 
 
+
+
 @media (max-width: 1024px) {
     .container {
         grid-template-columns: 1fr; /* Cambia a una sola columna */
@@ -449,8 +452,11 @@ a {
 
     .container .content p {
         font-size: 14px;
+        max-width: 20%; 
     }
 }
+
+
 
 @media (max-width: 768px) {
     .container {
@@ -476,6 +482,7 @@ a {
 
     .container .content p {
         font-size: 12px;
+        max-width: 20%; 
     }
 }
 
@@ -550,7 +557,7 @@ a {
     gap: 7px;
     width: 82px; /* Mayor tamaño inicial */
     height: 27px;
-    overflow: hidden;
+    overflow: visible;
     white-space: nowrap;
     transition: width 0.4s ease-in-out;
 }
@@ -563,7 +570,7 @@ a {
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
     vertical-align: middle; 
-    margin-top: -1px; 
+    margin-top: 0px; 
 
 }
 
@@ -602,7 +609,7 @@ a {
 
 .contact-btn {
     position: fixed;
-    right: 10px; /* Ajusta según necesidad */
+    right: 10px;
     top: 3.5%;
     transform: translateY(-50%);
     background-color: #2D2D2D;
@@ -613,44 +620,126 @@ a {
     border-radius: 4px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrar texto */
+    justify-content: center;
     gap: 10px;
-    width: 107px; /* Tamaño inicial */
-    height: 36px;
+    width: 86px; /* Tamaño inicial */
+    height: 32px;
     overflow: hidden;
     white-space: nowrap;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
     cursor: pointer;
 }
 
-/* Al hacer hover, se expande y cambia el contenido */
+/* Expande suavemente el botón al hacer hover */
 .contact-btn:hover {
     width: 197px; /* Expansión */
     background-color: #121212;
 }
 
-/* Ocultar "Get in touch" al hacer hover */
+/* Transición más suave en el texto */
 .contact-btn span:first-child {
     opacity: 1;
-    transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.8s ease-in-out; /* Más lento para mejor efecto */
 }
 
 .contact-btn:hover span:first-child {
-    opacity: 0; /* Desaparece "Get in touch" */
+    opacity: 0; /* Desaparece lentamente */
 }
 
-/* Mostrar solo el correo al hacer hover */
+/* Mostrar el correo con una animación más gradual */
 .contact-btn span:last-child {
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    position: absolute; /* Para evitar problemas de espacio */
+    transition: opacity 0.8s ease-in-out; /* Más smooth */
+    position: absolute; 
 }
 
 .contact-btn:hover span:last-child {
-    opacity: 1; /* Aparece el correo */
+    opacity: 1; /* Aparece con fade */
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para centrar los botones en la parte superior */
+.view-toggle {
+    position: fixed;
+    top: 61%; /* Ajusta la posición vertical según necesidad */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    display: flex;
+    gap: 6px;
+    z-index: 1000;
+}
+
+
+.view-toggle button {
+    background-color: rgba(236, 236, 236, 0.8);
+    color: #444444;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 11px;
+    transition: background-color 0.3s ease;
+}
+
+.view-toggle button.active {
+    background-color:  rgba(236, 236, 236, 0.8);
+}
+
+/* Estilos para el grid (Vista predeterminada) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 25px;
+    padding: 10px 5px;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Estilos para la vista de lista */
+.container.list-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 110px;
+    height: auto;
+}
+
+
+
+.container.list-view .project {
+    width: 70%;
+    max-width: 800px;
+}
+
+/* Ajustes para que los proyectos sean más grandes en lista */
+.list-view .project .visual img,
+.list-view .project .visual video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 
 
@@ -688,6 +777,10 @@ a {
         <span>gemma98ventura@gmail.com</span>
     </a>
     
+    
+
+
+
     
 
 
@@ -733,7 +826,7 @@ a {
             <div class="visual">
                 <img src="jpeg-optimizer_IS6C8082.jpg" alt="Imagen proyecto 2">
                 <a href="https://szymonkeller.com" class="open-website-btn" target="_blank">
-                    Open Website <img src="_pictoo_.png" alt="Icono" class="icon-open-website">
+                    Open Website <img src="picto_01_picto.png" alt="Icono" class="icon-open-website">
                 </a>
             </div>
             <div class="content">
@@ -961,6 +1054,32 @@ a {
             isHidden = false;
         }
     });
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".container");
+    const gridViewBtn = document.getElementById("gridView");
+    const listViewBtn = document.getElementById("listView");
+
+    // Función para cambiar a vista lista
+    listViewBtn.addEventListener("click", () => {
+        container.classList.add("list-view");
+        gridViewBtn.classList.remove("active");
+        listViewBtn.classList.add("active");
+    });
+
+    // Función para cambiar a vista grid
+    gridViewBtn.addEventListener("click", () => {
+        container.classList.remove("list-view");
+        gridViewBtn.classList.add("active");
+        listViewBtn.classList.remove("active");
+    });
+});
+
 </script>
 
 
