@@ -289,195 +289,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.container {
-    width: 100%;
-    max-width: 1485px; /* Adjust based on desired content width */
-    background-color: #fff;
-    padding: 0 20px; /* Padding on the sides, top/bottom handled by margins on elements */
-    margin-top: 335px;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 20px 0; /* Space above and below the lines */
-}
-
-.top-separator {
-    margin-top: 0; /* No margin at the very top */
-}
-
-.post-separator {
-    margin-bottom: 24px; /* No margin below the last separator */
-}
-
-.blog-post {
-    display: flex;
-    align-items: center;
-    padding: 20px 0;
-    gap: 0px; /* Space between image and content */
-}
-
-
-.post-image {
-    flex-shrink: 0; /* Prevent image from shrinking */
-    width: 240px; /* Fixed width for the image container */
-    height: 168px; /* Fixed height for the image container */
-    border-radius: 7px; /* Slightly rounded corners for the image */
-    overflow: hidden; /* Ensure image corners are rounded */
-    margin-top: -22px;
-}
-
-
-.post-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the area without distortion */
-    display: block; /* Remove extra space below image */
-    border-radius: 7px; /* Apply border-radius directly to the image */
-}
-
-.post-content {
-    flex-grow: 1; /* Allow content to take available space */
-}
-
-
-.post-date {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 127px;
-    margin-left: 175px;
-    margin-top: -20px;
-}
-
-.post-title {
-    font-size: 22px;
-    margin: 0;
-    color: #333;
-    line-height: 1.3;
-    margin-left: 175px;
-    font-weight: normal;
-}
-
-.read-more {
-    flex-shrink: 0; /* Prevent "Read More" from shrinking */
-    margin-left: auto; /* Push to the right */
-    margin-top: 104px;
-}
-
-
-
-.read-more a {
-      padding: 8px 14px;
-      color: #444444; /* Blue color for links */
-      right: 0;
-      top: 50px;
-      background-color: #F0F0F0;
-      border: none;
-      font-size: 12px;
-      cursor: pointer;
-    }
-
-
-
-    .blog-post:hover .post-date,
-.blog-post:hover .post-title,
-.blog-post:hover .read-more a {
-    color: rgba(68, 68, 68, 0.5);
-    transition: color 0.3s ease;
-    cursor: pointer;
-}
-
-.post-title a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.post-title a:hover {
-    color: rgba(68, 68, 68, 0.5);
-}
-
-
-
-
-
-
-.contact-btn {
-    position: fixed;
-    right: 10px;
-    top: 1.6%;
-    background-color: #2D2D2D;
-    color: #ebebeb;
-    font-size: 11px;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: 13px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.contact-btn:hover {
-    background-color: #121212;
-}
-
-
-
-
-
-
-
-
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .blog-post {
-        flex-direction: column; /* Stack elements vertically */
-        text-align: center;
-        gap: 10px;
-    }
-
-    .post-image {
-        width: 100%; /* Full width image on small screens */
-        height: auto; /* Adjust height automatically */
-    }
-
-    .post-image img {
-        max-width: 300px; /* Limit image width even if full width */
-        margin: 0 auto; /* Center image */
-    }
-
-    .read-more {
-        margin-left: 0; /* Remove auto margin */
-        margin-top: 15px; /* Add space above button */
-    }
-}
-
-
-
-
-
-
-
 footer {
     position: fixed;
     bottom: 0;
@@ -512,11 +323,6 @@ footer {
 
 
 
-
-
-
-
-
 .location-time {
             position: absolute;
             left: 13px;
@@ -529,7 +335,6 @@ footer {
         }
 
 
-        
         .menu2-item:hover {
     cursor: pointer;
 }
@@ -549,77 +354,25 @@ footer {
     <div class="menu">
         <a href="index.html" class="menu-item">Work</a>
         <a href="about.html" class="menu-item">Information</a>
-        <div class="menu-item active">Notes</div>
-        <a href="contact.html" class="menu-item">Contact</a>
+        <a href="contact copia.html" class="menu-item">Notes</a>
+        <div class="menu-item active">Contact</div>
     </div>
 
 
 
-    <a href="mailto:gemma98ventura@gmail.com" class="contact-btn">
-        Get in Touch
-    </a>
-
-
-
-
-
     <div class="about">
-        Notes<br>
+        Inquiries<br>
     </div>
 
 
 
     <div class="services-list">
         <div>
-            Occasionally, I write notes about thoughts and things I’ve learned from experiences.
+            For any questions, collaborations, or just to say hello, please feel free to 
+            <a href="mailto:gemma98ventura@gmail.com" class="email-link">get in touch</a>.
+            <br>
         </div>
     </div> 
-
-
-
-
-    <div class="container">
-        <hr class="top-separator">
-
-
-        <div class="blog-post">
-            <div class="post-image">
-                <a href="Notes.html">
-                    <img src="notes_photo_02.jpg" alt="Person in dance pose">
-                </a>
-            </div>
-            <div class="post-content">
-                <div class="post-date">March 23, 2025</div>
-                <h2 class="post-title">
-                    <a href="Notes.html">On rhythm, the body, and music as meditation</a>
-                </h2>
-            </div>
-            <div class="read-more">
-                <a href="Notes.html">Read More</a>
-            </div>
-        </div>
-        
-        <hr class="post-separator">
-        
-        <div class="blog-post">
-            <div class="post-image">
-                <a href="Notes_02.html">
-                    <img src="notes_photo_03.png" alt="Landscape with pink flowers and a bee">
-                </a>
-            </div>
-            <div class="post-content">
-                <div class="post-date">February 12, 2025</div>
-                <h2 class="post-title">
-                    <a href="Notes_02.html">Space shape us</a>
-                </h2>
-            </div>
-            <div class="read-more">
-                <a href="Notes_02.html">Read More</a>
-            </div>
-        </div>
-
-
-
     
 
     <footer class="extra-text">
@@ -636,6 +389,7 @@ document.querySelectorAll('.menu2-item').forEach(item => {
       }
     });
   });
+
 
         // Efecto de aparición al cargar la página
         window.addEventListener('load', function() {

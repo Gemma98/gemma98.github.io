@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" className="!scroll-smooth"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="FAVICON_WEB_GEMMA.ico">
+    <title>Gemma Ventura Atsarà</title>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+
+
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+        .name {
+            position: absolute;
+            left: 13px;
+            top: 34px;
+            font-size: 14px;
+            color: #F8F8F8; 
+            transition: opacity 0.2s ease;
+        }
+
+
+
+        .menu {
+    position: fixed;
+    top: 3.5%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para alinear al centro */
+    width: 188px; /* Ajusta automáticamente el ancho del menú según el contenido */
+    height: 33px; /* Altura fija del menú */
+    background-color: rgba(236, 236, 236, 0.8); 
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease, backdrop-filter 0.4s ease;
+    z-index: 10;
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(40px); 
+    opacity: 1; 
+}
+
+
+
+.menu2 {
+    position: fixed;
+    top: 3.5%; /* Centra verticalmente */
+    left: 5.3%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para alinear al centro */
+    width: 140px; /* Ajusta automáticamente el ancho del menú según el contenido */
+    height: 33px; /* Altura fija del menú */
+    background-color: rgba(236, 236, 236, 0.8); 
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease, backdrop-filter 0.4s ease;
+    z-index: 10;
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(40px); 
+    opacity: 1; 
+}
+
+.menu-item {
+    font-size: 11px;
+    color: #444444; 
+    margin: 0 10px;
+    transition: color 0.4s ease, font-weight 0.4s ease;
+    cursor: pointer;
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+
+
+.menu2-item {
+    font-size: 11px;
+    color: #444444; 
+    margin: 0 10px;
+    transition: color 0.4s ease, font-weight 0.4s ease;
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+/* Desactivar el cambio de color al hacer hover sobre el nombre */
+.menu2-item {
+    color: #444444; /* Color negro fijo */
+}
+
+/* Desactivar hover para Gemma Ventura Atsarà */
+.menu2-item:hover {
+    color: #444444; /* Mantener color negro en hover */
+}
+
+.menu-item:hover {
+    color: #9B9B9B;
+}
+
+.menu-item.active {
+    color: #9B9B9B; 
+}
+
+
+
+body {
+        background-color: white;
+    }
+
+
+
+
+
+
+
+        .logos-container {
+            position: absolute;
+            top: 8px;
+            right: 13px;
+            display: flex;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo {
+            width: 72px;
+            height: 22px;
+        }
+
+        .linkedin-logo {
+            margin-top: 40px;
+        }
+
+        .linkedin-logo {
+    width: 13px;
+    height: 13px;
+    margin-left: 20px;
+    margin-top: -2px; /* Ajusta a un valor negativo para subir */
+}
+
+
+        .logo, .linkedin-logo {
+            transition: filter 0.4s ease;
+        }
+
+        a:hover .logo {
+            filter: brightness(0.5);
+        }
+
+        a:hover .linkedin-logo {
+            filter: brightness(0.5);
+        }
+
+
+
+
+
+
+        .about span {
+            font-weight: bold;
+        }
+
+
+
+
+
+        
+        .link-text {
+            text-decoration: none; 
+            color: #C0C0C0; 
+            font-size: 12px; 
+        }
+
+        .link-container1:hover .link-icon,
+        .link-container2:hover .link-icon {
+            filter: brightness(0.8); 
+            transition: filter 0.4s ease; 
+        }
+
+        .link-container1:hover .link-text,
+        .link-container2:hover .link-text {
+            color: #636363; 
+            transition: color 0.4s ease; 
+        }
+
+
+
+
+.about {
+    position: absolute;
+    left: 14px;
+    top: 340px;
+    font-size: 33px;
+    color: #969696;
+    line-height: 1.2;
+    font-family: "Lora", serif;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.highlight {
+    position: absolute;
+    width: 43%; 
+    height: 83%;
+    background-color: #F8F8F8;
+    border-radius: 4px;
+    transition: left 0.4s ease;
+    margin-left: 3.5px;
+    z-index: 0;
+    left: 0; 
+}
+
+
+
+.name.hidden {
+    opacity: 0;
+    color: white; 
+}
+
+
+
+
+a {
+    text-decoration: none; 
+}
+
+
+
+.container {
+      max-width: 630px;
+      padding: 40px;
+      background-color: #ffffff;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 19px;
+      margin-top: 485px;
+      font-weight: normal;
+      color: #171717
+    }
+
+    .date {
+      font-size: 12px;
+      color: #343434;
+      margin-top: 85px;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    p {
+      margin-top: 45px;
+      font-size: 15px;
+      color: #343434;
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+    }
+
+
+    .note {
+      font-size: 12px;
+      color: #343434;
+      margin-top: 30px;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin-top: 140px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #BFBFBF;
+      margin-top: 70px;
+    }
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      
+    }
+
+
+
+    .back-button {
+  position: absolute;
+  top: 24px;
+  left: 34%;
+  transform: translateX(-50%);
+  z-index: 20;
+  font-size: 12px;
+  color: #343434;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  user-select: none;
+  cursor: default;
+}
+
+.underline-link {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.underline-link:hover {
+  color: #343434;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .menu2 {
+    top: 28px;
+    left: 88px;
+    width: 134px;      /* o menos según tu gusto */
+    height: 25px;      /* reduce altura */
+    font-size: 11px;
+    padding: 0 1px;
+  }
+
+
+
+      h1 {
+        font-size: 18px;
+      }
+
+      p, .note {
+        font-size: 15px;
+      }
+
+      .container {
+        padding: 16px;
+        margin-top: 190px;
+      }
+
+      .menu2 {
+        padding: 6px 12px;
+      }
+
+      .menu2-item {
+        font-size: 12px;
+      }
+
+      .back-button {
+        font-size: 0.8rem;
+        top: 60px;
+        left: 34px;
+      }
+    }
+
+
+
+
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 14px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .note {
+        font-size: 11px;
+      }
+
+      .menu2-item {
+        font-size: 11px;
+      }
+}
+
+
+.menu2-item:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+  <div class="back-button">
+    Read other <span class="underline-link" data-link="contact copia.html">notes</span> or <span class="underline-link" data-link="index.html">home</span>.
+  </div>
+
+  <div class="menu2">
+    <div class="menu2-item active" data-link="index.html">Gemma Ventura Atsarà</div>
+  </div> 
+
+
+
+
+
+
+
+    <div style="margin-top: 580px; font-size: 24px;">
+    </div>
+
+
+
+
+    <div class="container">
+        <h1>On rhythm, the body, and music as meditation</h1>
+        <div class="date">Published on 23-03-25</div>
+    
+        <p>
+            Lately, I’ve been thinking about how music — especially rhythm— can be more than just sound or entertainment. There’s something about repetitive, physical rhythm that shifts the focus from the mind to the body. It’s not just about moving, it’s about reconnecting. With the present. With sensation. With something deeper that doesn’t need to be explained. <br><br>
+
+            The dance floor becomes a space where the body listens before the brain does. You don’t need to understand the structure of the track, you just need to feel it. The beat becomes a guide, not in a technical sense, but in an intuitive one. It tells you when to stay, when to let go, when to breathe.<br><br>
+            
+            Sometimes I think of dancing as a form of physical meditation, a way to process thoughts or emotions that don’t have words yet. The repetition creates space. The body moves, not to perform, but to exist more fully in itself. Not everything has to “make sense” to be meaningful.<br><br>
+            
+            And maybe that’s what makes it powerful, there’s no need to control, no pressure to explain, no rules on how it should look. Just the act of being moved, freely, honestly.<br><br>
+            
+            In a world that demands constant explanation, dancing and listening, can be a way to return to a more honest state of attention. It’s not escapism as denial, but escapism as clarity. A way of tuning in through movement rather than tuning out.
+        </p>
+    
+        <p class="note">
+          These words are not meant to be definitive. You will find doubts, thoughts in progress, and personal perspectives that aren’t necessarily universal truths. I’m not a professional writer. It’s just a way for me to better understand my own thinking and to feel that there’s a thread connecting it all. If you find it useful, that’s great. If you don’t, that’s fine too.
+        </p>
+    
+        <div class="footer">© 2025 Gemma Ventura</div>
+      </div>
+
+
+
+
+
+      <script>
+
+document.querySelectorAll('.menu2-item').forEach(item => {
+    item.addEventListener('click', function () {
+      const destination = this.dataset.link;
+      if (destination) {
+        window.location.href = destination;
+      }
+    });
+  });
+
+
+        document.querySelectorAll('.underline-link').forEach(link => {
+          link.addEventListener('click', function () {
+            const destination = this.dataset.link;
+            window.location.href = destination;
+          });
+        });
+      </script>
+
+
+
+
+
+</body>
+</html>
