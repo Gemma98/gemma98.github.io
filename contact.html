@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemma Ventura Atsarà</title>
+<style>
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif; 
+        font-weight: 400;
+        margin: 0;
+        background-color: #F6F6F6;
+        color: #2B1703;
+    }
+
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+        padding: 30px;
+        margin-left: 5px;
+    }
+
+    .rectangle {
+        height: 6px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: left;
+        padding: 10px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .rectangle p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.4;
+        transition: color 0.3s;
+    }
+
+    /* Colores y anchuras específicas */
+    .first { width: 237px; background-color: #EEEEEE; }
+    .second { width: 796px; background-color: #EEEEEE; display: flex; gap: 10px; }
+    .third { width: 237px; background-color: #2D2D2D; color: #ffffff; }
+
+
+
+
+
+
+.first {
+    background-color: #EEEEEE;
+    transition: background-color 0.3s;
+}
+
+.first p {
+    color: #2B1703; /* color base */
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+/* Hover en el rectángulo */
+.first:hover {
+    background-color: #ffffff; /* fondo blanco */
+}
+
+.first:hover p {
+    color: #000000; /* texto negro por defecto al pasar por el rectángulo */
+}
+
+/* Hover directamente en el texto */
+.first p:hover {
+    color: #999999; /* gris cuando pasas por encima del texto */
+}
+
+
+
+
+    .second:hover { background-color: #ffffff; }
+    .second a {
+        text-decoration: none;
+        color: #2B1703;
+        transition: color 0.3s;
+        font-size: 12px;
+    }
+    .second a:hover { color: #999999; }
+
+    .third:hover { background-color: #000000; }
+    .third:hover p { color: #ffffff; }
+
+    .third p:hover {
+    opacity: 0.92;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.about {
+    /* mover más a la derecha */
+    margin-left: 20px; /* ajusta según lo que necesites */
+}
+
+
+
+    .containerhol {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      padding: 4rem;
+      align-items: start;
+    }
+
+    .about h3 {
+      font-size: 0.9rem;
+      font-weight: normal;
+      margin-bottom: 0.5rem;
+      margin-top: 124px;
+    }
+
+
+    
+    .about p {
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-top: 2px;
+    }
+
+
+
+
+
+
+
+    .about h3 {
+    font-size: 12px;
+    }
+
+
+
+
+
+
+    .about p {
+    font-size: 16px;
+    color: #2B1703;
+    line-height: 1.4;
+    }
+
+
+
+    .site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: flex-start; /* alineado a la izquierda */
+    align-items: center;
+    padding: 0 20px;
+    font-size: 11px;
+    color: #999999;
+    background: #F6F6F6; /* mismo color que el fondo */
+    z-index: 10;
+
+}
+
+
+
+
+
+
+.first a {
+    text-decoration: none; /* quita el subrayado */
+    color: #2B1703;        /* mismo color que el texto original */
+    font-size: 12px;       /* mismo tamaño */
+    line-height: 1.4;
+    transition: color 0.3s;
+    cursor: pointer;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.first:hover {
+    background-color: #ffffff; /* sigue cambiando el fondo en hover */
+}
+
+.first:hover a {
+    color: #000000; /* texto negro cuando pasas por el rectángulo */
+}
+
+.first a:hover {
+    color: #9C9C9C; /* gris solo cuando pasas por encima del texto */
+}
+
+
+
+
+.third a {
+    text-decoration: none;
+    color: #ffffff;  /* mismo color que el texto original */
+    font-size: 12px;
+    line-height: 1.4;
+    transition: color 0.3s;
+    cursor: pointer;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.third:hover {
+    background-color: #000000;
+}
+
+.third:hover a {
+    color: #ffffff;
+}
+
+.third a:hover {
+    opacity: 0.92; /* mismo efecto hover que tenías en el <p> */
+}
+
+
+
+
+
+#top-menu {
+    position: fixed;       /* se queda en la parte superior */
+    top: 0;
+    right: -30px;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; /* para animar la entrada/salida */
+}
+
+#top-menu.hidden {
+    transform: translateY(-100%); /* se mueve hacia arriba cuando desaparece */
+}
+
+
+
+
+.underline {
+  text-decoration: underline;
+}
+
+
+
+
+.underline {
+  text-decoration: underline;
+  color: inherit;        /* hereda el color del texto del párrafo */
+}
+
+.underline:hover {
+  color: inherit;        /* evita que cambie al pasar el ratón */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.containerhol {
+    min-height: calc(100vh - 60px); /* altura total de viewport menos footer */
+}
+
+    .intro {
+        font-size: 27px;
+        margin-left: 15px;
+        margin-top: 170px;
+        line-height: 1.2;
+        margin-bottom: 200px;
+    }
+
+    #top-menu {
+        justify-content: flex-start; /* alinea a la izquierda */
+        padding: 13px 15px;         /* padding normal */
+        top: 0;                     /* pegado arriba */
+        right: -31px;                   /* sin desplazamiento */
+    }
+
+
+
+
+
+    #top-menu {
+        position: fixed;   /* 🔑 fijar arriba */
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 100%;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+        padding: 13px 15px;
+    }
+
+    #top-menu.hidden {
+        transform: translateY(-100%);
+    }
+
+    /* Ajustes de las bubbles para mobile */
+    #top-menu .first,
+    #top-menu .second {
+        width: auto;
+        gap: 1px;
+    }
+
+    /* Bubble de Gemma Ventura Atsarà */
+    #top-menu .first {
+        width: auto;
+        justify-content: left;
+    }
+
+    #top-menu .first a {
+        padding: 8px 40px 8px 1px; /* más espacio a la derecha */
+        justify-content: left;
+    }
+
+    #top-menu .second {
+        width: auto;          /* flexible según contenido */
+        gap: 1px;             /* espacio muy pequeño entre enlaces */
+        padding-left: 11px;
+        padding-right: 50px;  /* más espacio a la derecha de la bubble */
+        justify-content: flex-start; /* que los enlaces sigan juntos */
+    }
+
+    #top-menu .third {
+        display: none;
+    }
+
+    .rectangle {
+        padding: 13px 10px;
+    }
+
+
+    .containerhol {
+        display: block; /* Apilar columnas verticalmente */
+        padding: 15px;
+        margin: 0;
+    }
+
+    .about {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .about h3 {
+        font-size: 10px;
+        margin-bottom: 6px;
+        margin-top: 158px;
+    }
+
+    .about p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .about a.underline {
+        font-size: 12px;
+    }
+
+
+
+}
+
+
+</style>
+</head>
+<body>
+
+    <div id="top-menu" class="container">
+        <div class="rectangle first">
+            <a href="index.html">Gemma Ventura Atsarà</a>
+        </div>
+        
+    
+        <div class="rectangle second">
+            <a href="index.html">Work,</a>
+            <a href="information.html">Information,</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    
+        <div class="rectangle third">
+            <a href="mailto:gemma98ventura@gmail.com">Get in Touch</a>
+        </div>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+<div class="containerhol">
+    <!-- Columna About -->
+    <div class="about">
+        <h3>Inquiries</h3>
+        <p>
+            For any questions, collaborations, or just to say hello, please feel free to 
+            <a href="mailto:gemma98ventura@gmail.com" class="underline">get in touch</a>.
+          </p>          
+      </div>
+      
+
+
+  <footer class="site-footer">
+    <span>© 2025</span>
+</footer>
+    
+    
+</div>
+
+
+
+
+
+<script>
+
+
+
+
+    </script>
+    
+
+
+</body>
+</html>
+
+
+
